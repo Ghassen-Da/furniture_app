@@ -1,0 +1,14 @@
+<div class="furniture-container">
+  <mat-icon
+    *ngIf="furniture.isSelected"
+    (click)="removeFurniture(furniture)"
+    class="add-remove-button"
+    >clear</mat-icon
+  >
+  <img
+    src="{{ furniture.image }}"
+    #image
+    (load)="image.style.height = furniture.height + 'px'"
+    (click)="addFurniture(furniture)"
+  />
+</div>

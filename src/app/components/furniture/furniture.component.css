@@ -1,0 +1,17 @@
+.furniture-container {
+  height: fit-content;
+  width: fit-content;
+  background: transparent;
+  position: relative;
+}
+
+.furniture-container:hover {
+  transform: scale(1.03);
+  transform-origin: bottom;
+  cursor: pointer;
+}
+
+.add-remove-button {
+  position: absolute;
+  right: 0;
+}
