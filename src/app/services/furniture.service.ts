@@ -35,7 +35,7 @@ export class FurnitureService {
         return this.allFurnitures;
     }
 
-    getFurnitureCategories(): string[] {
-        return this.allFurnitures.map(furniture => furniture.category).filter((value, index, self) => self.indexOf(value) === index);
+    getFurnitureTypes(): string[] {
+        return this.allFurnitures.map(furniture => furniture.type).filter((value, index, self) => self.indexOf(value) === index);
     }
 }

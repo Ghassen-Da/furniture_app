@@ -21,13 +21,13 @@ import { Utils } from 'src/app/utils';
 })
 export class RoomComponent implements OnInit {
   furnitures: Furniture[] = [];
-  categories: string[] = [];
+  types: string[] = [];
   expandedIndex = 0;
 a={x:1,y:2};
   constructor(private readonly furnitureService: FurnitureService) { }
 
   ngOnInit(): void {
-    this.categories = this.furnitureService.getFurnitureCategories();
+    this.types = this.furnitureService.getFurnitureTypes();
     this.furnitures = this.furnitureService.getFurnitures();
   }
 

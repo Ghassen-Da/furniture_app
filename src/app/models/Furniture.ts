@@ -1,7 +1,7 @@
 export class Furniture {
     constructor(
         public id: string,
-        public category: string,
+        public type: string,
         public height: number = 200,
         public image: string = '',
         public isSelected: boolean = false,

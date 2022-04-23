@@ -19,7 +19,7 @@
   </div>
   <div id="all-furnitures-container">
     <cdk-accordion-item
-      *ngFor="let category of categories; let index = index"
+      *ngFor="let type of types; let index = index"
       #accordionItem="cdkAccordionItem"
       class="accordion-item"
       role="button"
@@ -29,7 +29,7 @@
       [attr.aria-controls]="'accordion-body-' + index"
     >
       <div class="accordion-item-header" (click)="accordionItem.toggle()">
-        {{ category }}
+        {{ type }}
         <span class="accordion-item-description">
           <mat-icon *ngIf="accordionItem.expanded">keyboard_arrow_up</mat-icon>
           <mat-icon *ngIf="!accordionItem.expanded"
@@ -47,7 +47,7 @@
         <div *ngFor="let furniture of furnitures">
           <app-furniture
             [furniture]="furniture"
-            *ngIf="!furniture.isSelected && furniture.category == category"
+            *ngIf="!furniture.isSelected && furniture.type == type"
           ></app-furniture>
         </div>
       </div>
