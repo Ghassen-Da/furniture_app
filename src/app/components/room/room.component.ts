@@ -16,6 +16,14 @@ import { Utils } from 'src/app/utils';
         }),
         animate("1s ease-out", style({ opacity: 1}))
       ]),
+    ]),
+    trigger("furnitureDisappearAnimation", [
+      transition(":leave", [
+        style({
+          opacity: 1,
+        }),
+        animate("1s ease-out", style({ opacity: 0}))
+      ]),
     ])
   ]
 })

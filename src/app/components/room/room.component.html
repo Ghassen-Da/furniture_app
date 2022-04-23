@@ -9,6 +9,7 @@
           cdkDragBoundary=".boundary-box"
           class="furniture-container"
           @furnitureAppearAnimation
+          @furnitureDisappearAnimation
         >
           <div class="drag-box" cdkDragBoundary=".drag-boundary" cdkDrag>
             <app-furniture [furniture]="furniture"></app-furniture>
